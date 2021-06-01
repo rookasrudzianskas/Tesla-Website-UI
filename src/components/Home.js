@@ -7,6 +7,9 @@ const Home = () => {
             <Header>
 
             </Header>
+            <Rokas>
+
+            </Rokas>
         </Container>
     );
 };

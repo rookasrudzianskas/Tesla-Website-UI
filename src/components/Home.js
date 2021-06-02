@@ -8,7 +8,9 @@ const Home = () => {
 
             </Header>
             <Rokas>
+                <Tinder>
 
+                </Tinder>
             </Rokas>
         </Container>
     );

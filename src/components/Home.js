@@ -12,6 +12,9 @@ const Home = () => {
 
                 </Tinder>
             </Rokas>
+            <As>
+
+            </As>
         </Container>
     );
 };

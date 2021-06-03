@@ -1,14 +1,18 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from "styled-components";
 import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
 
 const Header = () => {
+
+    const [burgerStatus, setBurgerStatus] = useState( false);
     return (
         <Container>
             <a href="">
                 <img src="/images/logo.svg" alt=""/>
             </a>
+
+
 
             <Menu>
                 <a href="#">Model S</a>
@@ -21,12 +25,12 @@ const Header = () => {
             <RightMenu>
                 <a href="#">Shop</a>
                 <a href="#">Tesla Account</a>
-                <CustomMenu />
+                <CustomMenu onClick={() => setBurgerStatus(true)} />
             </RightMenu>
             
-            <BurgerNav>
+            <BurgerNav show={burgerStatus}>
                 <CloseWrapper>
-                    <CustomClose />
+                    <CustomClose onClick={() => setBurgerStatus(false)} />
                 </CloseWrapper>
 
                 <li><a href="#">Model S</a></li>
@@ -109,6 +113,9 @@ const BurgerNav = styled.div`
   display: flex;
   flex-direction: column;
   text-align: start;
+  // this shows the bar
+  transform: ${props => props.show ? 'translateX(0)' : 'translateX(100%)'};
+  transition: transform 0.2s ease-in-out;
   
   li {
     padding: 15px 0;

@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Section = ({ title, backgroundImg, description, leftBtnText, rightBtnText}) => {
     return (
-        <Wrap>
+        <Wrap bgImage={backgroundImg} >
             <ItemText>
                 <h1>{title}</h1>
                 <p>{description}</p>
@@ -14,10 +14,11 @@ const Section = ({ title, backgroundImg, description, leftBtnText, rightBtnText}
                 <LeftButton>
                     {leftBtnText}
                 </LeftButton>
-
+                {rightBtnText &&
                 <RightButton>
                     {rightBtnText}
                 </RightButton>
+                }
             </ButtonGroup>
 
             <DownArrow src="/images/down-arrow.svg" />
@@ -33,7 +34,8 @@ const Wrap = styled.div`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url('/images/model-s.jpg');
+  // then it gets passed in here, and we access the props, and show that props in here
+  background-image: ${props => `url("/images/${props.bgImage}")`};
   display: flex;
   flex-direction: column;
   justify-content: space-between; // vertical align

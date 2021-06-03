@@ -13,16 +13,16 @@ const Section = ({ title, backgroundImg, description, leftBtnText, rightBtnText}
             </Fade>
             <Buttons>
                 <Fade bottom>
-            <ButtonGroup>
-                <LeftButton>
-                    {leftBtnText}
-                </LeftButton>
-                {rightBtnText &&
-                <RightButton>
-                    {rightBtnText}
-                </RightButton>
-                }
-            </ButtonGroup>
+                <ButtonGroup>
+                    <LeftButton>
+                        {leftBtnText}
+                    </LeftButton>
+                    {rightBtnText &&
+                    <RightButton>
+                        {rightBtnText}
+                    </RightButton>
+                    }
+                </ButtonGroup>
                 </Fade>
 
             <DownArrow src="/images/down-arrow.svg" />

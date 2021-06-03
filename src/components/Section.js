@@ -11,11 +11,11 @@ const Section = () => {
 
             <ButtonGroup>
                 <LeftButton>
-
+                    Custom Order
                 </LeftButton>
 
                 <RightButton>
-
+                    Existing Inventory
                 </RightButton>
             </ButtonGroup>
         </Wrap>
